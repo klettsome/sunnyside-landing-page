@@ -1,0 +1,133 @@
+// NAVAGATION
+// Mobile Nav
+.main-nav {
+  &__toggle,
+  &__toggle::before,
+  &__toggle::after {
+    display: block;
+    width: 2.4rem;
+    height: 0.2rem;
+    background-color: var(--clr-neutral-white);
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+  }
+
+  &__toggle {
+    position: relative;
+  }
+
+  &__toggle::before,
+  &__toggle::after {
+    content: '';
+    position: absolute;
+  }
+
+  &__toggle::before {
+    top: 0.8rem;
+  }
+
+  &__toggle::after {
+    bottom: 0.8rem;
+  }
+
+  &__toggle.open {
+    background-color: transparent;
+
+    &::before {
+      transform: rotate(-45deg);
+      transform-origin: 0px -2px;
+    }
+
+    &::after {
+      transform: rotate(45deg);
+      transform-origin: 4px 3px;
+    }
+  }
+
+  // Desktop Nav
+
+  &__desktop-menu {
+    &__link {
+      color: var(--clr-neutral-white);
+      margin-right: 4.7rem;
+      transition: color 300ms ease-in-out;
+    }
+
+    &__link:hover {
+      color: var(--clr-primary-yellow);
+    }
+  }
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 10rem;
+  right: 0.9rem;
+
+  &__list {
+    text-align: center;
+    background-color: var(--clr-neutral-white);
+    padding: 3.9rem 2.4125rem;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -1.6rem;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 1.6rem 1.8rem 0 0;
+      border-color: transparent var(--clr-neutral-white) transparent transparent;
+    }
+  }
+
+  &__link {
+    display: block;
+    color: var(--clr-neutral-drk-gray-blue-1);
+    padding: 1.6875rem 9.385rem;
+    transition: color 300ms ease-in-out;
+  }
+
+  &__link:hover {
+    color: var(--clr-neutral-drk-desat-blue);
+  }
+}
+
+.social-list {
+  width: 16.4rem;
+  margin: 0 auto;
+
+  &__icon:hover {
+    filter: brightness(5.5);
+  }
+}
+
+// BUTTONS
+.btn {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--clr-neutral-drk-desat-blue);
+  text-transform: uppercase;
+  padding: 1.6rem 3.2rem;
+  border-radius: 2.8rem;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+
+  &--white {
+    background-color: var(--clr-neutral-white);
+  }
+
+  &--light {
+    background-color: var(--clr-primary-yellow);
+    margin: 0.528rem 0;
+  }
+
+  &--white:hover,
+  &--light:hover {
+    opacity: 25.37%;
+  }
+}

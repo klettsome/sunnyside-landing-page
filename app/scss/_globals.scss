@@ -1,0 +1,121 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1.8rem;
+  color: var(--clr-neutral-drk-desat-blue);
+  font-weight: 600;
+  line-height: 1.6;
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+// Headings
+.heading-primary {
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--clr-neutral-white);
+  letter-spacing: 0.625rem;
+  text-transform: uppercase;
+  margin-bottom: 5.2rem;
+}
+
+.heading-secondary {
+  font-size: 3.2rem;
+  margin-bottom: 2.4rem;
+}
+
+.heading-teritary {
+  font-size: 2.8rem;
+  margin-bottom: 2.7rem;
+}
+
+.heading-quaternary {
+  font-size: 1.6rem;
+  color: var(--clr-neutral-gray-blue);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+// General
+.text-content__box {
+  padding: 6.4rem 0;
+  background-color: hsl(34, 100%, 99%);
+}
+.text-content__text {
+  color: var(--clr-neutral-drk-gray-blue-1);
+  margin-bottom: 3.2rem;
+}
+
+.text-content__link--1,
+.text-content__link--2 {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--clr-neutral-drk-desat-blue);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    right: -0.75rem;
+    width: 13.7rem;
+    height: 1rem;
+    border-radius: 2.8rem;
+    opacity: 25%;
+  }
+}
+
+.text-content__link--1::after {
+  background-color: var(--clr-primary-yellow);
+}
+.text-content__link--2::after {
+  background-color: var(--clr-primary-soft-red);
+}
+
+.img-box {
+  height: 31.2rem;
+  background-size: cover;
+  background-position: center center;
+}
+
+.img-box--1 {
+  background-image: url(/images/mobile/image-transform.jpg);
+}
+
+.img-box--2 {
+  background-image: url(/images/mobile/image-stand-out.jpg);
+}

@@ -1,0 +1,59 @@
+// Utilities
+.container {
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+}
+
+// Spacing
+.mb {
+  margin-bottom: 6.4rem;
+}
+
+// FLEX BOX STYLES
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-center {
+    justify-content: center;
+  }
+
+  &-ai-center {
+    align-items: center;
+  }
+}
+
+// Grid Styles
+.grid {
+  display: grid;
+}
+
+.grid-2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+// Visibility
+.hide-for-mobile {
+  // hide for tablet and mobile
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  //  hide for desktop viewport widths
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
+
+.fade-in {
+  animation: fade-in 300ms ease-in-out forwards;
+}
+
+.fade-out {
+  animation: fade-out 300ms ease-in-out forwards;
+}
